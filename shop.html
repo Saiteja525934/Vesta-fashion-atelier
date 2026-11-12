@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Catalog — VESTA Atelier Collections</title>
+  <meta name="description" content="Explore the complete Vesta Atelier fashion catalog. Architectural coats, virgin wool tailoring, fine cashmere knitwear and handcrafted leather accessories.">
+
+  <!-- Google Fonts: Bodoni Moda & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-container">
+      <div class="announcement-links">
+        <a href="about.html">The Atelier</a>
+        <a href="contact.html">Boutiques</a>
+      </div>
+      <div class="announcement-message">
+        Complimentary worldwide express shipping on orders over $250 • Code: <span class="highlight">ATELIER25</span>
+      </div>
+      <div class="announcement-links">
+        <a href="#">USD ($)</a>
+        <a href="contact.html">Help & Concierge</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="nav-left">
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="shop.html" class="nav-link active">Shop</a>
+          <a href="shop.html?cat=women" class="nav-link">Women</a>
+          <a href="shop.html?cat=men" class="nav-link">Men</a>
+          <a href="about.html" class="nav-link">Atelier</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+      </div>
+
+      <div class="header-brand">
+        <a href="index.html" class="brand-logo">
+          VESTA<span class="dot">.</span>
+        </a>
+        <span class="brand-sub">STUDIO ATELIER</span>
+      </div>
+
+      <div class="nav-right">
+        <a href="#" class="header-action-btn" aria-label="Search Catalog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+        <a href="#" class="header-action-btn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </a>
+        <a href="#cart" class="header-action-btn js-cart-trigger" aria-label="View Shopping Bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count-badge">2</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slide-in Cart Drawer -->
+  <div class="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Shopping Bag <span class="count">(2 items)</span></h3>
+      <button class="drawer-close-btn js-cart-close" aria-label="Close Cart">✕</button>
+    </div>
+    <div class="free-shipping-notice">
+      <div class="free-shipping-text">
+        <span>Add <strong>$45.00</strong> more to unlock <strong>Free Express Shipping</strong></span>
+      </div>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" style="width: 82%;"></div>
+      </div>
+    </div>
+    <div class="drawer-body">
+      <div class="cart-items-list">
+        <div class="cart-item">
+          <div class="cart-item-thumb">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=400&q=80" alt="Cashmere Coat">
+          </div>
+          <div class="cart-item-details">
+            <h4 class="cart-item-title"><a href="product.html">Double-Faced Cashmere Overcoat</a></h4>
+            <div class="cart-item-meta">Color: Oxblood Maroon | Size: M</div>
+            <div class="cart-item-price">$480.00</div>
+          </div>
+          <button class="cart-item-remove">✕</button>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-footer">
+      <div class="drawer-summary-row total">
+        <span>Subtotal</span>
+        <span>$480.00 USD</span>
+      </div>
+      <a href="shop.html" class="btn btn-primary btn-block">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <!-- Catalog Header Banner -->
+  <div class="catalog-header">
+    <div class="container">
+      <nav class="breadcrumb-nav" style="justify-content: center; display: flex;" aria-label="Breadcrumb">
+        <ol class="breadcrumb-list">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-separator">/</li>
+          <li class="breadcrumb-item active" style="color: var(--color-text-main);">All Collections</li>
+        </ol>
+      </nav>
+      <h1 style="margin-top: 0.5rem; margin-bottom: 0.75rem;">Atelier Archive & Collection</h1>
+      <p style="max-width: 600px; margin: 0 auto; font-size: 1.05rem;">
+        Seasonless wardrobe staples sculpted from pure, single-origin virgin wools, Scottish cashmeres, and Portuguese cotton poplins.
+      </p>
+    </div>
+  </div>
+
+  <!-- Catalog Main -->
+  <main class="section-sm">
+    <div class="container">
+      <!-- Toolbar -->
+      <div class="catalog-toolbar">
+        <div style="font-size: 0.8125rem; color: var(--color-text-muted);">
+          Showing <strong>1–12</strong> of 36 garments
+        </div>
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <label for="catalog-sort" style="font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">Sort by:</label>
+          <select id="catalog-sort" style="padding: 0.5rem 1rem; border: 1px solid var(--color-border); background: var(--color-bg-card); font-size: 0.8125rem; font-weight: 500;">
+            <option>Featured Curations</option>
+            <option>Newest Arrivals</option>
+            <option>Price: Low to High</option>
+            <option>Price: High to Low</option>
+            <option>Highest Customer Rating</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 2-Column Layout -->
+      <div class="catalog-layout">
+        <!-- Sidebar Filters -->
+        <aside class="filter-sidebar">
+          <!-- Categories Filter -->
+          <div>
+            <div class="filter-group-title">Garment Category</div>
+            <div class="filter-list">
+              <label class="filter-checkbox-label">
+                <input type="checkbox" checked>
+                <span>All Categories</span>
+                <span class="count">36</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="checkbox">
+                <span>Outerwear & Trench</span>
+                <span class="count">11</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="checkbox">
+                <span>Architectural Tailoring</span>
+                <span class="count">9</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="checkbox">
+                <span>Merino & Cashmere Knits</span>
+                <span class="count">8</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="checkbox">
+                <span>Trousers & Bottoms</span>
+                <span class="count">5</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="checkbox">
+                <span>Handcrafted Leatherware</span>
+                <span class="count">3</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Color Palette Filter -->
+          <div>
+            <div class="filter-group-title">Color Palette</div>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+              <span class="swatch-dot active" style="background-color: #6B1724; width: 22px; height: 22px;" title="Oxblood Burgundy"></span>
+              <span class="swatch-dot" style="background-color: #C39B6F; width: 22px; height: 22px;" title="Tuscan Camel"></span>
+              <span class="swatch-dot" style="background-color: #DDD4C6; width: 22px; height: 22px;" title="Raw Oatmeal"></span>
+              <span class="swatch-dot" style="background-color: #2D2A28; width: 22px; height: 22px;" title="Slate Noir"></span>
+              <span class="swatch-dot" style="background-color: #4D453E; width: 22px; height: 22px;" title="Espresso"></span>
+              <span class="swatch-dot" style="background-color: #2E3339; width: 22px; height: 22px;" title="Midnight Navy"></span>
+            </div>
+          </div>
+
+          <!-- Size Filter -->
+          <div>
+            <div class="filter-group-title">Sizing</div>
+            <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
+              <button class="size-chip-btn" style="min-width: 40px; height: 36px; font-size: 0.75rem;">XS</button>
+              <button class="size-chip-btn" style="min-width: 40px; height: 36px; font-size: 0.75rem;">S</button>
+              <button class="size-chip-btn active" style="min-width: 40px; height: 36px; font-size: 0.75rem;">M</button>
+              <button class="size-chip-btn" style="min-width: 40px; height: 36px; font-size: 0.75rem;">L</button>
+              <button class="size-chip-btn" style="min-width: 40px; height: 36px; font-size: 0.75rem;">XL</button>
+            </div>
+          </div>
+
+          <!-- Material Filter -->
+          <div>
+            <div class="filter-group-title">Fiber Composition</div>
+            <div class="filter-list">
+              <label class="filter-checkbox-label">
+                <input type="checkbox">
+                <span>100% Grade-A Cashmere</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="checkbox">
+                <span>Italian Virgin Wool</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="checkbox">
+                <span>GOTS Certified Organic Cotton</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="checkbox">
+                <span>Mulberry Raw Silk</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Price Range Filter -->
+          <div>
+            <div class="filter-group-title">Price Range</div>
+            <div class="filter-list">
+              <label class="filter-checkbox-label">
+                <input type="checkbox">
+                <span>Under $250.00</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="checkbox" checked>
+                <span>$250.00 — $500.00</span>
+              </label>
+              <label class="filter-checkbox-label">
+                <input type="checkbox">
+                <span>$500.00 and above</span>
+              </label>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Product Grid (12 items) -->
+        <div>
+          <div class="products-grid grid-3">
+            <!-- 1 -->
+            <div class="product-card" data-category="outerwear">
+              <div class="product-media">
+                <div class="product-badges"><span class="badge badge-sale">New Season</span></div>
+                <a href="product.html">
+                  <img class="product-image primary" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=700&q=80" alt="Cashmere Coat">
+                  <img class="product-image hover" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80" alt="Angle">
+                </a>
+                <button class="product-quick-add">+ Quick Add To Bag</button>
+              </div>
+              <div class="product-info">
+                <span class="product-category-tag">Outerwear</span>
+                <h4 class="product-title"><a href="product.html">Double-Faced Cashmere Overcoat</a></h4>
+                <div class="product-pricing"><span class="price-current">$480.00</span><span class="price-original">$580.00</span></div>
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="product-card" data-category="tailoring">
+              <div class="product-media">
+                <div class="product-badges"><span class="badge badge-new">Bestseller</span></div>
+                <a href="product.html">
+                  <img class="product-image primary" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=80" alt="Blazer">
+                  <img class="product-image hover" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80" alt="Angle">
+                </a>
+                <button class="product-quick-add">+ Quick Add To Bag</button>
+              </div>
+              <div class="product-info">
+                <span class="product-category-tag">Tailoring</span>
+                <h4 class="product-title"><a href="product.html">Structured Virgin Wool Blazer</a></h4>
+                <div class="product-pricing"><span class="price-current">$375.00</span></div>
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="product-card" data-category="knitwear">
+              <div class="product-media">
+                <a href="product.html">
+                  <img class="product-image primary" src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=700&q=80" alt="Merino Knit">
+                  <img class="product-image hover" src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=700&q=80" alt="Angle">
+                </a>
+                <button class="product-quick-add">+ Quick Add To Bag</button>
+              </div>
+              <div class="product-info">
+                <span class="product-category-tag">Knitwear</span>
+                <h4 class="product-title"><a href="product.html">Ribbed Merino Funnel Neck</a></h4>
+                <div class="product-pricing"><span class="price-current">$240.00</span></div>
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="product-card" data-category="accessories">
+              <div class="product-media">
+                <a href="product.html">
+                  <img class="product-image primary" src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=700&q=80" alt="Calfskin Bag">
+                  <img class="product-image hover" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80" alt="Angle">
+                </a>
+                <button class="product-quick-add">+ Quick Add To Bag</button>
+              </div>
+              <div class="product-info">
+                <span class="product-category-tag">Accessories</span>
+                <h4 class="product-title"><a href="product.html">Architectural Calfskin Tote</a></h4>
+                <div class="product-pricing"><span class="price-current">$340.00</span></div>
+              </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="product-card" data-category="outerwear">
+              <div class="product-media">
+                <a href="product.html">
+                  <img class="product-image primary" src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=700&q=80" alt="Wool Trench">
+                  <img class="product-image hover" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80" alt="Angle">
+                </a>
+                <button class="product-quick-add">+ Quick Add To Bag</button>
+              </div>
+              <div class="product-info">
+                <span class="product-category-tag">Outerwear</span>
+                <h4 class="product-title"><a href="product.html">Double-Breasted Wool Trench</a></h4>
+                <div class="product-pricing"><span class="price-current">$520.00</span></div>
+              </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="product-card" data-category="tailoring">
+              <div class="product-media">
+                <a href="product.html">
+                  <img class="product-image primary" src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=700&q=80" alt="Pleated Trousers">
+                  <img class="product-image hover" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80" alt="Angle">
+                </a>
+                <button class="product-quick-add">+ Quick Add To Bag</button>
+              </div>
+              <div class="product-info">
+                <span class="product-category-tag">Tailoring</span>
+                <h4 class="product-title"><a href="product.html">Double-Pleat Wide Leg Trousers</a></h4>
+                <div class="product-pricing"><span class="price-current">$290.00</span></div>
+              </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="product-card" data-category="knitwear">
+              <div class="product-media">
+                <div class="product-badges"><span class="badge badge-sale">-15%</span></div>
+                <a href="product.html">
+                  <img class="product-image primary" src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=700&q=80" alt="Cashmere Crew">
+                  <img class="product-image hover" src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=700&q=80" alt="Angle">
+                </a>
+                <button class="product-quick-add">+ Quick Add To Bag</button>
+              </div>
+              <div class="product-info">
+                <span class="product-category-tag">Knitwear</span>
+                <h4 class="product-title"><a href="product.html">Seamless Mongolian Cashmere Crew</a></h4>
+                <div class="product-pricing"><span class="price-current">$215.00</span><span class="price-original">$255.00</span></div>
+              </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="product-card" data-category="accessories">
+              <div class="product-media">
+                <a href="product.html">
+                  <img class="product-image primary" src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80" alt="Leather Loafer">
+                  <img class="product-image hover" src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=700&q=80" alt="Angle">
+                </a>
+                <button class="product-quick-add">+ Quick Add To Bag</button>
+              </div>
+              <div class="product-info">
+                <span class="product-category-tag">Footwear</span>
+                <h4 class="product-title"><a href="product.html">Italian Goodyear-Welted Loafer</a></h4>
+                <div class="product-pricing"><span class="price-current">$360.00</span></div>
+              </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="product-card" data-category="tailoring">
+              <div class="product-media">
+                <a href="product.html">
+                  <img class="product-image primary" src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=700&q=80" alt="Poplin Shirt">
+                  <img class="product-image hover" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=80" alt="Angle">
+                </a>
+                <button class="product-quick-add">+ Quick Add To Bag</button>
+              </div>
+              <div class="product-info">
+                <span class="product-category-tag">Shirting</span>
+                <h4 class="product-title"><a href="product.html">Crisp Organic Cotton Poplin Shirt</a></h4>
+                <div class="product-pricing"><span class="price-current">$195.00</span></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="pagination-wrap">
+            <button class="page-btn active">1</button>
+            <button class="page-btn">2</button>
+            <button class="page-btn">3</button>
+            <button class="page-btn" style="width: auto; padding: 0 1.25rem;">Next →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">VESTA<span class="dot" style="color: var(--color-oxblood);">.</span></div>
+          <p>An architectural fashion atelier dedicated to sustainable craft, certified Italian fibers, and seasonless silhouettes built for longevity.</p>
+        </div>
+        <div>
+          <h5 class="footer-heading">Collections</h5>
+          <div class="footer-links">
+            <a href="shop.html">New Season 2025</a>
+            <a href="shop.html?cat=outerwear">Cashmere Outerwear</a>
+            <a href="shop.html?cat=tailoring">Architectural Suiting</a>
+            <a href="shop.html?cat=knitwear">Merino Knits</a>
+          </div>
+        </div>
+        <div>
+          <h5 class="footer-heading">Concierge & Care</h5>
+          <div class="footer-links">
+            <a href="contact.html">Customer Care</a>
+            <a href="contact.html#faq">Shipping & Duties</a>
+            <a href="contact.html#returns">30-Day Returns</a>
+          </div>
+        </div>
+        <div>
+          <h5 class="footer-heading">Boutiques</h5>
+          <div class="footer-contact-item">
+            <div>
+              <strong>Milan Flagship:</strong><br>
+              Via Monte Napoleone 14, Milano
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div>concierge@vestastudio.com</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2025–2026 VESTA STUDIO ATELIER. All rights reserved.</div>
+        <div class="payment-methods">
+          <span class="payment-pill">VISA</span>
+          <span class="payment-pill">MASTERCARD</span>
+          <span class="payment-pill">AMEX</span>
+          <span class="payment-pill">APPLE PAY</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

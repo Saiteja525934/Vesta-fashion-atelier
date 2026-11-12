@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VESTA — Modern Editorial Fashion Atelier</title>
+  <meta name="description" content="Vesta is a modern luxury clothing and fashion atelier storefront featuring architectural tailoring and sustainable fabrics.">
+  
+  <!-- Google Fonts: Bodoni Moda (Display Serif) & Manrope (Body Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 1. ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <div class="announcement-container">
+      <div class="announcement-links">
+        <a href="about.html">The Atelier</a>
+        <a href="contact.html">Boutiques</a>
+      </div>
+      <div class="announcement-message">
+        Complimentary worldwide express shipping on orders over $250 • Code: <span class="highlight">ATELIER25</span>
+      </div>
+      <div class="announcement-links">
+        <a href="#">USD ($)</a>
+        <a href="#">Help & Concierge</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. STICKY HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <!-- Left Navigation -->
+      <div class="nav-left">
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link active">Home</a>
+          <a href="shop.html" class="nav-link">Shop</a>
+          <a href="shop.html?cat=women" class="nav-link">Women</a>
+          <a href="shop.html?cat=men" class="nav-link">Men</a>
+          <a href="about.html" class="nav-link">Atelier</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+      </div>
+
+      <!-- Center Brand Logo -->
+      <div class="header-brand">
+        <a href="index.html" class="brand-logo">
+          VESTA<span class="dot">.</span>
+        </a>
+        <span class="brand-sub">STUDIO ATELIER</span>
+      </div>
+
+      <!-- Right Header Actions -->
+      <div class="nav-right">
+        <!-- Search -->
+        <a href="#" class="header-action-btn" aria-label="Search Catalog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+
+        <!-- Account -->
+        <a href="#" class="header-action-btn" aria-label="User Account">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+        </a>
+
+        <!-- Wishlist -->
+        <a href="#" class="header-action-btn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </a>
+
+        <!-- Cart Drawer Trigger -->
+        <a href="#cart" class="header-action-btn js-cart-trigger" aria-label="View Shopping Bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count-badge">2</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. MOBILE NAVIGATION OVERLAY -->
+  <div class="mobile-nav-overlay">
+    <div class="mobile-nav-list">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <a href="shop.html" class="mobile-nav-link">New Arrivals</a>
+      <a href="shop.html?cat=women" class="mobile-nav-link">Women's Collection</a>
+      <a href="shop.html?cat=men" class="mobile-nav-link">Men's Tailoring</a>
+      <a href="product.html" class="mobile-nav-link">Featured Piece</a>
+      <a href="about.html" class="mobile-nav-link">Our Atelier</a>
+      <a href="contact.html" class="mobile-nav-link">Concierge</a>
+    </div>
+    <div class="mobile-nav-footer">
+      <p style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 1rem;">Concierge Hours: Mon–Sat, 9AM–7PM CET</p>
+      <a href="tel:+18005558378" style="font-weight: 700; color: var(--color-oxblood);">+1 (800) 555-VESTA</a>
+    </div>
+  </div>
+
+  <!-- 4. SLIDE-IN CART DRAWER -->
+  <div class="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <!-- Header -->
+    <div class="drawer-header">
+      <h3 class="drawer-title">
+        Shopping Bag <span class="count">(2 items)</span>
+      </h3>
+      <button class="drawer-close-btn js-cart-close" aria-label="Close Cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Free Shipping Progress -->
+    <div class="free-shipping-notice">
+      <div class="free-shipping-text">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="1" y="3" width="15" height="13"></rect>
+          <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+          <circle cx="5.5" cy="18.5" r="2.5"></circle>
+          <circle cx="18.5" cy="18.5" r="2.5"></circle>
+        </svg>
+        <span>Add <strong>$45.00</strong> more to unlock <strong>Free Express Shipping</strong></span>
+      </div>
+      <div class="progress-bar-container">
+        <div class="progress-bar-fill" style="width: 82%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Body -->
+    <div class="drawer-body">
+      <div class="cart-items-list">
+        <!-- Item 1 -->
+        <div class="cart-item">
+          <div class="cart-item-thumb">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=400&q=80" alt="Cashmere Coat">
+          </div>
+          <div class="cart-item-details">
+            <h4 class="cart-item-title"><a href="product.html">Double-Faced Cashmere Overcoat</a></h4>
+            <div class="cart-item-meta">Color: Oxblood Maroon | Size: M</div>
+            <div class="cart-item-price">$480.00</div>
+            <div class="quantity-stepper">
+              <button class="stepper-btn decrease" aria-label="Decrease quantity">−</button>
+              <span class="stepper-value">1</span>
+              <button class="stepper-btn increase" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+          <button class="cart-item-remove" title="Remove Item">✕</button>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="cart-item">
+          <div class="cart-item-thumb">
+            <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=400&q=80" alt="Wool Blazer">
+          </div>
+          <div class="cart-item-details">
+            <h4 class="cart-item-title"><a href="product.html">Structured Virgin Wool Blazer</a></h4>
+            <div class="cart-item-meta">Color: Oatmeal | Size: S</div>
+            <div class="cart-item-price">$375.00</div>
+            <div class="quantity-stepper">
+              <button class="stepper-btn decrease" aria-label="Decrease quantity">−</button>
+              <span class="stepper-value">1</span>
+              <button class="stepper-btn increase" aria-label="Increase quantity">+</button>
+            </div>
+          </div>
+          <button class="cart-item-remove" title="Remove Item">✕</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="drawer-footer">
+      <div class="drawer-summary-row">
+        <span>Subtotal</span>
+        <strong>$855.00</strong>
+      </div>
+      <div class="drawer-summary-row">
+        <span>Estimated Duties & Taxes</span>
+        <span>Calculated at checkout</span>
+      </div>
+      <div class="drawer-summary-row total">
+        <span>Estimated Total</span>
+        <span>$855.00 USD</span>
+      </div>
+      <a href="shop.html" class="btn btn-primary btn-block">
+        Proceed to Checkout
+      </a>
+      <div class="drawer-guarantee">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+        </svg>
+        <span>End-to-End Encrypted Checkout • 30-Day Atelier Trial</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 5. MAIN CONTENT -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Text Content -->
+          <div class="hero-content">
+            <span class="eyebrow">Autumn / Winter Atelier 2025</span>
+            <h1 class="hero-title">
+              Architectural <span class="italic">Silhouettes</span> for the Modern Mind.
+            </h1>
+            <p class="hero-description">
+              Elevated essentials crafted with intentional restraint, hand-finished virgin wools, and sculptured double-faced cashmere. Made slowly in our northern Italian ateliers.
+            </p>
+            <div class="hero-actions">
+              <a href="shop.html" class="btn btn-primary">
+                Explore The Collection
+              </a>
+              <a href="about.html" class="btn btn-outline">
+                Read Atelier Journal
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Visual Framing -->
+          <div class="hero-visual-wrapper">
+            <div class="hero-image-card">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85" alt="Vesta Fall Winter Editorial Look">
+            </div>
+
+            <!-- Floating editorial badge -->
+            <div class="hero-floating-badge">
+              <span class="badge-label">Limited Edition</span>
+              <div class="badge-text">Collection 08: The Restrained Form</div>
+            </div>
+
+            <!-- Secondary floating detail -->
+            <div class="hero-secondary-thumb">
+              <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=400&q=80" alt="Fabric Texture Details">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. BRAND VALUE PILLARS -->
+    <section class="pillars-section">
+      <div class="container">
+        <div class="pillars-grid">
+          <div class="pillar-item">
+            <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+              <path d="M2 17l10 5 10-5"></path>
+              <path d="M2 12l10 5 10-5"></path>
+            </svg>
+            <div class="pillar-content">
+              <h5>Artisanal Italian Craft</h5>
+              <p>Meticulously tailored by master artisans in historic Bergamo & Tuscany ateliers.</p>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="10"></circle>
+              <path d="M12 6v6l4 2"></path>
+            </svg>
+            <div class="pillar-content">
+              <h5>Slow Fashion Philosophy</h5>
+              <p>Seasonless wardrobe capsules built to withstand fleeting trends and decades of wear.</p>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            </svg>
+            <div class="pillar-content">
+              <h5>Traceable Organic Fibers</h5>
+              <p>Certified GOTS organic cottons, cruelty-free silks, and regenerative cashmere yarns.</p>
+            </div>
+          </div>
+
+          <div class="pillar-item">
+            <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path>
+              <path d="M4 6v12c0 1.1.9 2 2 2h14v-4"></path>
+              <circle cx="18" cy="16" r="2"></circle>
+            </svg>
+            <div class="pillar-content">
+              <h5>Complimentary Returns</h5>
+              <p>30 days to feel the cut and drape in the comfort of your own dressing room.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CURATED CATEGORY SPOTLIGHT -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">Curated Formats</span>
+          <h2>The Architecture of Dressing</h2>
+          <p class="section-desc">Explore intentional capsules organized around pure geometry, functional utility, and tactile luxury.</p>
+        </div>
+
+        <div class="categories-grid">
+          <!-- Card 1 (Large) -->
+          <div class="category-card large">
+            <img class="category-card-img" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1200&q=80" alt="Women's Overcoats & Outerwear">
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <span class="eyebrow" style="color: var(--color-gold);">Autumn Drop 01</span>
+              <h3 class="category-card-title">Sculpted Outerwear</h3>
+              <div class="category-card-count">18 Signature Pieces</div>
+              <a href="shop.html?cat=outerwear" class="category-card-link">Explore Outerwear →</a>
+            </div>
+          </div>
+
+          <!-- Card 2 (Large) -->
+          <div class="category-card large">
+            <img class="category-card-img" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80" alt="Tailored Suits & Trousers">
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <span class="eyebrow" style="color: var(--color-gold);">Sartorial Tailoring</span>
+              <h3 class="category-card-title">Structured Suiting</h3>
+              <div class="category-card-count">14 Tailored Silhouettes</div>
+              <a href="shop.html?cat=tailoring" class="category-card-link">Discover Suiting →</a>
+            </div>
+          </div>
+
+          <!-- Card 3 (Small) -->
+          <div class="category-card small">
+            <img class="category-card-img" src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=800&q=80" alt="Merino & Cashmere Knitwear">
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <h3 class="category-card-title">Heavy Knitwear</h3>
+              <div class="category-card-count">11 Yarns</div>
+              <a href="shop.html?cat=knitwear" class="category-card-link">Shop Knits →</a>
+            </div>
+          </div>
+
+          <!-- Card 4 (Small) -->
+          <div class="category-card small">
+            <img class="category-card-img" src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=800&q=80" alt="Artisanal Leather Bags">
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <h3 class="category-card-title">Handmade Leatherware</h3>
+              <div class="category-card-count">9 Objects</div>
+              <a href="shop.html?cat=leather" class="category-card-link">View Objects →</a>
+            </div>
+          </div>
+
+          <!-- Card 5 (Small) -->
+          <div class="category-card small">
+            <img class="category-card-img" src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80" alt="Minimalist Shoes & Boots">
+            <div class="category-card-overlay"></div>
+            <div class="category-card-content">
+              <h3 class="category-card-title">Footwear & Loafers</h3>
+              <div class="category-card-count">7 Styles</div>
+              <a href="shop.html?cat=footwear" class="category-card-link">Shop Footwear →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. INSTANT CATEGORY FILTER & PRODUCT SHOWCASE -->
+    <section class="section" style="background-color: var(--color-bg-elevated); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">The Atelier Selection</span>
+          <h2>Signature Garments</h2>
+          <p class="section-desc">Each piece is cut with laser precision and assembled with hand-finished interior seams.</p>
+        </div>
+
+        <!-- Filter Pills Bar -->
+        <div class="filter-tabs">
+          <button class="filter-tab-btn active" data-filter="all">All Silhouettes</button>
+          <button class="filter-tab-btn" data-filter="outerwear">Outerwear</button>
+          <button class="filter-tab-btn" data-filter="tailoring">Tailoring</button>
+          <button class="filter-tab-btn" data-filter="knitwear">Knitwear</button>
+          <button class="filter-tab-btn" data-filter="accessories">Accessories</button>
+        </div>
+
+        <!-- Product Grid (8 items) -->
+        <div class="products-grid">
+          <!-- Product 1 -->
+          <div class="product-card" data-category="outerwear">
+            <div class="product-media">
+              <div class="product-badges">
+                <span class="badge badge-sale">New Season</span>
+              </div>
+              <button class="product-wishlist-btn" aria-label="Add to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <a href="product.html">
+                <img class="product-image primary" src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=700&q=80" alt="Double-Faced Cashmere Overcoat">
+                <img class="product-image hover" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80" alt="Double-Faced Cashmere Overcoat - Angle">
+              </a>
+              <button class="product-quick-add js-quick-add">+ Quick Add To Bag</button>
+            </div>
+            <div class="product-info">
+              <span class="product-category-tag">Outerwear</span>
+              <h4 class="product-title"><a href="product.html">Double-Faced Cashmere Overcoat</a></h4>
+              <div class="product-pricing">
+                <span class="price-current">$480.00</span>
+                <span class="price-original">$580.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #6B1724;" title="Oxblood Maroon"></span>
+                <span class="swatch-dot" style="background-color: #C39B6F;" title="Camel"></span>
+                <span class="swatch-dot" style="background-color: #2D2A28;" title="Slate Black"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card" data-category="tailoring">
+            <div class="product-media">
+              <div class="product-badges">
+                <span class="badge badge-new">Bestseller</span>
+              </div>
+              <button class="product-wishlist-btn" aria-label="Add to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <a href="product.html">
+                <img class="product-image primary" src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=700&q=80" alt="Structured Virgin Wool Blazer">
+                <img class="product-image hover" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80" alt="Blazer Back View">
+              </a>
+              <button class="product-quick-add js-quick-add">+ Quick Add To Bag</button>
+            </div>
+            <div class="product-info">
+              <span class="product-category-tag">Tailoring</span>
+              <h4 class="product-title"><a href="product.html">Structured Virgin Wool Blazer</a></h4>
+              <div class="product-pricing">
+                <span class="price-current">$375.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #DDD4C6;" title="Oatmeal"></span>
+                <span class="swatch-dot" style="background-color: #1A1817;" title="Warm Ink"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card" data-category="knitwear">
+            <div class="product-media">
+              <button class="product-wishlist-btn" aria-label="Add to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <a href="product.html">
+                <img class="product-image primary" src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=700&q=80" alt="Ribbed Merino Funnel Neck">
+                <img class="product-image hover" src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=700&q=80" alt="Merino Knit Texture">
+              </a>
+              <button class="product-quick-add js-quick-add">+ Quick Add To Bag</button>
+            </div>
+            <div class="product-info">
+              <span class="product-category-tag">Knitwear</span>
+              <h4 class="product-title"><a href="product.html">Ribbed Merino Funnel Neck</a></h4>
+              <div class="product-pricing">
+                <span class="price-current">$240.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #4D453E;" title="Espresso"></span>
+                <span class="swatch-dot" style="background-color: #E6E1D8;" title="Chalk"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card" data-category="accessories">
+            <div class="product-media">
+              <div class="product-badges">
+                <span class="badge badge-limited">Limited Run</span>
+              </div>
+              <button class="product-wishlist-btn" aria-label="Add to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <a href="product.html">
+                <img class="product-image primary" src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=700&q=80" alt="Architectural Calfskin Tote">
+                <img class="product-image hover" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80" alt="Leather Bag Handle Details">
+              </a>
+              <button class="product-quick-add js-quick-add">+ Quick Add To Bag</button>
+            </div>
+            <div class="product-info">
+              <span class="product-category-tag">Accessories</span>
+              <h4 class="product-title"><a href="product.html">Architectural Calfskin Tote</a></h4>
+              <div class="product-pricing">
+                <span class="price-current">$340.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #6B1724;" title="Oxblood Burgundy"></span>
+                <span class="swatch-dot" style="background-color: #1A1817;" title="Noir"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="product-card" data-category="outerwear">
+            <div class="product-media">
+              <button class="product-wishlist-btn" aria-label="Add to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <a href="product.html">
+                <img class="product-image primary" src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=700&q=80" alt="Belted Wool Trench">
+                <img class="product-image hover" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80" alt="Trench Belt Close Up">
+              </a>
+              <button class="product-quick-add js-quick-add">+ Quick Add To Bag</button>
+            </div>
+            <div class="product-info">
+              <span class="product-category-tag">Outerwear</span>
+              <h4 class="product-title"><a href="product.html">Double-Breasted Wool Trench</a></h4>
+              <div class="product-pricing">
+                <span class="price-current">$520.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #B48B57;" title="Tuscan Camel"></span>
+                <span class="swatch-dot" style="background-color: #2E3339;" title="Navy"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="product-card" data-category="tailoring">
+            <div class="product-media">
+              <button class="product-wishlist-btn" aria-label="Add to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <a href="product.html">
+                <img class="product-image primary" src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=700&q=80" alt="Pleated Wide-Leg Trousers">
+                <img class="product-image hover" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=700&q=80" alt="Trouser Pleats View">
+              </a>
+              <button class="product-quick-add js-quick-add">+ Quick Add To Bag</button>
+            </div>
+            <div class="product-info">
+              <span class="product-category-tag">Tailoring</span>
+              <h4 class="product-title"><a href="product.html">Double-Pleat Wide Leg Trousers</a></h4>
+              <div class="product-pricing">
+                <span class="price-current">$290.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #555048;" title="Olive Charcoal"></span>
+                <span class="swatch-dot" style="background-color: #D3CABA;" title="Sand"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div class="product-card" data-category="knitwear">
+            <div class="product-media">
+              <div class="product-badges">
+                <span class="badge badge-sale">-15%</span>
+              </div>
+              <button class="product-wishlist-btn" aria-label="Add to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <a href="product.html">
+                <img class="product-image primary" src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=700&q=80" alt="Seamless Cashmere Crewneck">
+                <img class="product-image hover" src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=700&q=80" alt="Cashmere Crewneck Detail">
+              </a>
+              <button class="product-quick-add js-quick-add">+ Quick Add To Bag</button>
+            </div>
+            <div class="product-info">
+              <span class="product-category-tag">Knitwear</span>
+              <h4 class="product-title"><a href="product.html">Seamless Mongolian Cashmere Crew</a></h4>
+              <div class="product-pricing">
+                <span class="price-current">$215.00</span>
+                <span class="price-original">$255.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #6B1724;" title="Oxblood"></span>
+                <span class="swatch-dot" style="background-color: #ECE7DE;" title="Milk"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div class="product-card" data-category="accessories">
+            <div class="product-media">
+              <button class="product-wishlist-btn" aria-label="Add to wishlist">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+              <a href="product.html">
+                <img class="product-image primary" src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=700&q=80" alt="Sculpted Leather Loafer">
+                <img class="product-image hover" src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=700&q=80" alt="Shoe Sole Construction">
+              </a>
+              <button class="product-quick-add js-quick-add">+ Quick Add To Bag</button>
+            </div>
+            <div class="product-info">
+              <span class="product-category-tag">Footwear</span>
+              <h4 class="product-title"><a href="product.html">Italian Goodyear-Welted Loafer</a></h4>
+              <div class="product-pricing">
+                <span class="price-current">$360.00</span>
+              </div>
+              <div class="product-swatches">
+                <span class="swatch-dot active" style="background-color: #242220;" title="Black Polished"></span>
+                <span class="swatch-dot" style="background-color: #593122;" title="Cognac"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Catalog CTA -->
+        <div style="text-align: center; margin-top: 4rem;">
+          <a href="shop.html" class="btn btn-dark">
+            View All 36 Pieces
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. EDITORIAL STORY SECTION ("THE ATELIER") -->
+    <section class="section editorial-story">
+      <div class="container">
+        <div class="editorial-grid">
+          <!-- Image Frame with Floating Quote -->
+          <div class="editorial-image-frame">
+            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1000&q=80" alt="Atelier Craftsmanship">
+            <div class="editorial-quote-card">
+              <div class="editorial-quote-text">
+                "We do not design for the runway's ephemeral noise; we design for the quiet confidence of enduring life."
+              </div>
+              <div class="editorial-quote-author">Matteo Vesta — Creative Director</div>
+            </div>
+          </div>
+
+          <!-- Narrative Text -->
+          <div class="editorial-narrative">
+            <span class="eyebrow">The Atelier Journal</span>
+            <h2>Pure Geometry Meets Natural Tactility</h2>
+            <p>
+              Founded in 2018 between Milan and Stockholm, VESTA represents a convergence of classical Italian drapery and Nordic minimalism. Every pattern is drawn by hand, testing how fabric moves with the human body in motion.
+            </p>
+            <p>
+              We source directly from family-owned heritage spinning mills in Biella, Italy, ensuring 100% fiber traceability from pasture to garment bag. No synthetic blends, no microplastics, and zero compromised seams.
+            </p>
+
+            <div class="editorial-stats">
+              <div class="stat-item">
+                <div class="stat-num">100%</div>
+                <div class="stat-label">Organic Fibers</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">14</div>
+                <div class="stat-label">Master Ateliers</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">0%</div>
+                <div class="stat-label">Virgin Plastics</div>
+              </div>
+            </div>
+
+            <a href="about.html" class="btn btn-primary">
+              Discover Our Philosophy
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. FULL-BLEED LOOKBOOK BANNER -->
+    <section class="lookbook-banner" style="background-image: url('https://images.unsplash.com/photo-1469334031218-e382a71b716b?auto=format&fit=crop&w=1920&q=80');">
+      <div class="container">
+        <div class="lookbook-content">
+          <span class="eyebrow">Lookbook Capsule 05</span>
+          <h2>The Solitude of Winter: Vol. V</h2>
+          <p>
+            Photographed along the volcanic shores of the Faroe Islands. Heavy gauge knits, layered structured coats, and windswept virgin wool scarfs designed for quiet contemplation.
+          </p>
+          <a href="shop.html" class="btn btn-outline" style="color: #FFF; border-color: #FFF;">
+            Explore Lookbook Editorial →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. PRESS & CRITICAL ACCLAIM -->
+    <section class="press-strip">
+      <div class="container">
+        <div class="press-logos">
+          <span class="press-logo">VOGUE</span>
+          <span class="press-logo">HARPER'S BAZAAR</span>
+          <span class="press-logo">ELLE</span>
+          <span class="press-logo">GQ EDITORIAL</span>
+          <span class="press-logo">MONOCLE</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. TESTIMONIALS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="eyebrow">Patron Experiences</span>
+          <h2>Voices of Restraint</h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-quote">
+                "The Double-Faced Cashmere Overcoat is arguably the most impeccably draped coat I have touched in two decades. It commands presence without screaming."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Elena Rostova">
+              <div>
+                <div class="author-name">Elena Rostova</div>
+                <div class="author-meta">Architectural Designer, Zurich</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-quote">
+                "The suiting proportions are nothing short of revolutionary. The shoulder silhouette remains structured while the wool breathes effortlessly throughout full days."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Marcus Lindqvist">
+              <div>
+                <div class="author-name">Marcus Lindqvist</div>
+                <div class="author-meta">Curator, Stockholm</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div>
+              <div class="testimonial-stars">★★★★★</div>
+              <p class="testimonial-quote">
+                "Ordering was seamless and the packaging arrived completely free of plastics. The weight of the merino knit is substantial yet remarkably soft against bare skin."
+              </p>
+            </div>
+            <div class="testimonial-author">
+              <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Claire DuPont">
+              <div>
+                <div class="author-name">Claire DuPont</div>
+                <div class="author-meta">Creative Director, Paris</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. INSTAGRAM FEED EDITORIAL -->
+    <section class="section-sm" style="padding-bottom: 0;">
+      <div class="container" style="margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end;">
+        <div>
+          <span class="eyebrow">Community & Atelier</span>
+          <h3 style="margin-bottom: 0;">Follow @vestastudio</h3>
+        </div>
+        <a href="https://instagram.com" target="_blank" rel="noopener" class="btn-text">Join The Conversation →</a>
+      </div>
+
+      <div class="instagram-feed-grid">
+        <a href="shop.html" class="insta-item">
+          <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" alt="Instagram 1">
+          <div class="insta-overlay">
+            <span>View Outfit</span>
+          </div>
+        </a>
+        <a href="shop.html" class="insta-item">
+          <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80" alt="Instagram 2">
+          <div class="insta-overlay">
+            <span>View Outfit</span>
+          </div>
+        </a>
+        <a href="shop.html" class="insta-item">
+          <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=600&q=80" alt="Instagram 3">
+          <div class="insta-overlay">
+            <span>View Outfit</span>
+          </div>
+        </a>
+        <a href="shop.html" class="insta-item">
+          <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80" alt="Instagram 4">
+          <div class="insta-overlay">
+            <span>View Outfit</span>
+          </div>
+        </a>
+        <a href="shop.html" class="insta-item">
+          <img src="https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80" alt="Instagram 5">
+          <div class="insta-overlay">
+            <span>View Outfit</span>
+          </div>
+        </a>
+        <a href="shop.html" class="insta-item">
+          <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=600&q=80" alt="Instagram 6">
+          <div class="insta-overlay">
+            <span>View Outfit</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- 14. NEWSLETTER / ATELIER CIRCLE -->
+    <section class="newsletter-section">
+      <div class="container">
+        <div class="newsletter-box">
+          <span class="eyebrow">The Atelier Circle</span>
+          <h2>Receive Private Capsule Invitations</h2>
+          <p>
+            Members receive 48-hour early access to limited edition runs, private appointments in our Milan and Paris studios, and seasonal editorial lookbooks.
+          </p>
+
+          <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing to VESTA.');">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+          <div class="newsletter-note">
+            We honor your privacy. Unsubscribe whenever you wish with one click.
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 15. FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand & Mission -->
+        <div class="footer-brand">
+          <div class="brand-logo">VESTA<span class="dot" style="color: var(--color-oxblood);">.</span></div>
+          <p>
+            An architectural fashion atelier dedicated to sustainable craft, certified Italian fibers, and seasonless silhouettes built for longevity.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="Instagram">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Pinterest">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <circle cx="12" cy="12" r="7"></circle>
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="LinkedIn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Collections Column -->
+        <div>
+          <h5 class="footer-heading">Collections</h5>
+          <div class="footer-links">
+            <a href="shop.html">New Season 2025</a>
+            <a href="shop.html?cat=outerwear">Cashmere Outerwear</a>
+            <a href="shop.html?cat=tailoring">Architectural Suiting</a>
+            <a href="shop.html?cat=knitwear">Merino Knits</a>
+            <a href="shop.html?cat=accessories">Leatherware & Shoes</a>
+            <a href="shop.html">Archive Sale</a>
+          </div>
+        </div>
+
+        <!-- Concierge & Care -->
+        <div>
+          <h5 class="footer-heading">Concierge & Care</h5>
+          <div class="footer-links">
+            <a href="contact.html">Customer Care</a>
+            <a href="contact.html#faq">Shipping & Duties</a>
+            <a href="contact.html#returns">30-Day Returns</a>
+            <a href="product.html">Garment Size Guide</a>
+            <a href="about.html#craft">Material Care Guide</a>
+            <a href="contact.html">Private Styling Appointments</a>
+          </div>
+        </div>
+
+        <!-- Boutiques & Contact -->
+        <div>
+          <h5 class="footer-heading">Boutiques & Ateliers</h5>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <div>
+              <strong>Milan Flagship:</strong><br>
+              Via Monte Napoleone 14, 20121 Milano, Italy
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <div>
+              <strong>New York Studio:</strong><br>
+              462 West Broadway, SoHo, NY 10012
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <div>concierge@vestastudio.com</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          © 2025–2026 VESTA STUDIO ATELIER. All rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Sale</a>
+          <a href="#">Accessibility</a>
+          <a href="#">Cookie Preferences</a>
+        </div>
+        <div class="payment-methods">
+          <span class="payment-pill">VISA</span>
+          <span class="payment-pill">MASTERCARD</span>
+          <span class="payment-pill">AMEX</span>
+          <span class="payment-pill">APPLE PAY</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+</html>

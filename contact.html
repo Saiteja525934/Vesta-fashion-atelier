@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concierge & Contact — VESTA Atelier</title>
+  <meta name="description" content="Connect with the VESTA Atelier concierge team for personal styling, sizing guidance, order assistance, or private studio appointments.">
+
+  <!-- Google Fonts: Bodoni Moda & Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="announcement-container">
+      <div class="announcement-links">
+        <a href="about.html">The Atelier</a>
+        <a href="contact.html">Boutiques</a>
+      </div>
+      <div class="announcement-message">
+        Complimentary worldwide express shipping on orders over $250 • Code: <span class="highlight">ATELIER25</span>
+      </div>
+      <div class="announcement-links">
+        <a href="#">USD ($)</a>
+        <a href="contact.html">Help & Concierge</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="nav-left">
+        <button class="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="shop.html" class="nav-link">Shop</a>
+          <a href="shop.html?cat=women" class="nav-link">Women</a>
+          <a href="shop.html?cat=men" class="nav-link">Men</a>
+          <a href="about.html" class="nav-link">Atelier</a>
+          <a href="contact.html" class="nav-link active">Contact</a>
+        </nav>
+      </div>
+
+      <div class="header-brand">
+        <a href="index.html" class="brand-logo">
+          VESTA<span class="dot">.</span>
+        </a>
+        <span class="brand-sub">STUDIO ATELIER</span>
+      </div>
+
+      <div class="nav-right">
+        <a href="#" class="header-action-btn" aria-label="Search Catalog">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </a>
+        <a href="#" class="header-action-btn" aria-label="Wishlist">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+        </a>
+        <a href="#cart" class="header-action-btn js-cart-trigger" aria-label="View Shopping Bag">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-count-badge">2</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slide-in Cart Drawer -->
+  <div class="cart-drawer-overlay"></div>
+  <aside class="cart-drawer" aria-label="Shopping Cart Drawer">
+    <div class="drawer-header">
+      <h3 class="drawer-title">Shopping Bag <span class="count">(2 items)</span></h3>
+      <button class="drawer-close-btn js-cart-close" aria-label="Close Cart">✕</button>
+    </div>
+    <div class="drawer-body">
+      <div class="cart-items-list">
+        <div class="cart-item">
+          <div class="cart-item-thumb">
+            <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=400&q=80" alt="Cashmere Coat">
+          </div>
+          <div class="cart-item-details">
+            <h4 class="cart-item-title"><a href="product.html">Double-Faced Cashmere Overcoat</a></h4>
+            <div class="cart-item-price">$480.00</div>
+          </div>
+          <button class="cart-item-remove">✕</button>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-footer">
+      <a href="shop.html" class="btn btn-primary btn-block">Proceed to Checkout</a>
+    </div>
+  </aside>
+
+  <!-- Contact Hero -->
+  <div class="about-hero">
+    <div class="container-narrow">
+      <span class="eyebrow">Client Concierge</span>
+      <h1 style="margin-bottom: 1.5rem;">We Are at Your Service</h1>
+      <p class="lead">
+        Whether you require personalized garment sizing guidance, wish to arrange a private studio appointment in Milan, or have questions regarding fiber care, our dedicated advisors are here to assist.
+      </p>
+    </div>
+  </div>
+
+  <!-- Contact Main Section -->
+  <main class="section">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Direct Contacts & Information (Left) -->
+        <div>
+          <span class="eyebrow">Direct Channels</span>
+          <h2>Atelier Assistance</h2>
+          <p style="margin-bottom: 2.5rem;">
+            Our client care team operates Monday through Saturday, from 9:00 AM to 7:00 PM Central European Time.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 3.5rem;">
+            <div style="border-left: 2px solid var(--color-oxblood); padding-left: 1.5rem;">
+              <h5 style="margin-bottom: 0.35rem;">Client Care & Inquiries</h5>
+              <p style="font-size: 0.9rem; margin-bottom: 0.25rem;">concierge@vestastudio.com</p>
+              <p style="font-size: 0.85rem; color: var(--color-text-light);">Response window: Within 4 business hours</p>
+            </div>
+
+            <div style="border-left: 2px solid var(--color-oxblood); padding-left: 1.5rem;">
+              <h5 style="margin-bottom: 0.35rem;">Private Appointments & VIP Fittings</h5>
+              <p style="font-size: 0.9rem; margin-bottom: 0.25rem;">appointments@vestastudio.com</p>
+              <p style="font-size: 0.85rem; color: var(--color-text-light);">Available in Milan, Paris, New York, and Tokyo</p>
+            </div>
+
+            <div style="border-left: 2px solid var(--color-oxblood); padding-left: 1.5rem;">
+              <h5 style="margin-bottom: 0.35rem;">Press & Wholesale Inquiries</h5>
+              <p style="font-size: 0.9rem; margin-bottom: 0.25rem;">press@vestastudio.com</p>
+            </div>
+          </div>
+
+          <!-- FAQ Summary -->
+          <div id="faq" style="border-top: 1px solid var(--color-border); padding-top: 2.5rem;">
+            <h3 style="margin-bottom: 1.5rem;">Frequently Inquired</h3>
+            
+            <div class="pdp-tabs">
+              <div class="pdp-tab-item active">
+                <button class="pdp-tab-header">
+                  <span>How long does worldwide express shipping take?</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="pdp-tab-content">
+                  <p>All international orders are dispatched via DHL Express with signature required. Delivery typically takes 2–4 business days to North America, Europe, and the UK, and 3–5 days to the Asia-Pacific region.</p>
+                </div>
+              </div>
+
+              <div class="pdp-tab-item" id="returns">
+                <button class="pdp-tab-header">
+                  <span>What is your 30-day return policy?</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="pdp-tab-content">
+                  <p>We provide complimentary returns within 30 days of receipt. Garments must be unworn, unwashed, and in their original packaging with tags intact. A prepaid return shipping label is enclosed in every shipment.</p>
+                </div>
+              </div>
+
+              <div class="pdp-tab-item">
+                <button class="pdp-tab-header">
+                  <span>Can I request bespoke pattern adjustments?</span>
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>
+                <div class="pdp-tab-content">
+                  <p>Yes. Custom sleeve and hem adjustments are available through our private appointment service at our flagship boutiques or upon request before dispatch for select overcoats.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form (Right) -->
+        <div>
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you. A VESTA Concierge advisor will contact you within 4 business hours.'); this.reset();">
+            <span class="eyebrow">Message The Atelier</span>
+            <h3 style="margin-bottom: 2rem;">Send an Inquiry</h3>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-name">Full Name *</label>
+              <input type="text" id="contact-name" class="form-control" placeholder="e.g. Eleanor Vance" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-email">Email Address *</label>
+              <input type="email" id="contact-email" class="form-control" placeholder="e.g. eleanor@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-topic">Subject of Inquiry</label>
+              <select id="contact-topic" class="form-control">
+                <option>Sizing & Silhouette Consultation</option>
+                <option>Private Boutique Appointment Request</option>
+                <option>Order Tracking & Shipping Status</option>
+                <option>Returns & Exchanges</option>
+                <option>Garment Care & Maintenance</option>
+                <option>Other Matter</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-order">Order Reference (Optional)</label>
+              <input type="text" id="contact-order" class="form-control" placeholder="e.g. #VES-8924">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Your Message *</label>
+              <textarea id="contact-message" class="form-control" placeholder="Please describe your inquiry with as much detail as convenient..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Transmit Inquiry →
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo">VESTA<span class="dot" style="color: var(--color-oxblood);">.</span></div>
+          <p>An architectural fashion atelier dedicated to sustainable craft, certified Italian fibers, and seasonless silhouettes built for longevity.</p>
+        </div>
+        <div>
+          <h5 class="footer-heading">Collections</h5>
+          <div class="footer-links">
+            <a href="shop.html">New Season 2025</a>
+            <a href="shop.html?cat=outerwear">Cashmere Outerwear</a>
+            <a href="shop.html?cat=tailoring">Architectural Suiting</a>
+            <a href="shop.html?cat=knitwear">Merino Knits</a>
+          </div>
+        </div>
+        <div>
+          <h5 class="footer-heading">Concierge & Care</h5>
+          <div class="footer-links">
+            <a href="contact.html">Customer Care</a>
+            <a href="contact.html#faq">Shipping & Duties</a>
+            <a href="contact.html#returns">30-Day Returns</a>
+          </div>
+        </div>
+        <div>
+          <h5 class="footer-heading">Boutiques</h5>
+          <div class="footer-contact-item">
+            <div>
+              <strong>Milan Flagship:</strong><br>
+              Via Monte Napoleone 14, Milano
+            </div>
+          </div>
+          <div class="footer-contact-item">
+            <div>concierge@vestastudio.com</div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2025–2026 VESTA STUDIO ATELIER. All rights reserved.</div>
+        <div class="payment-methods">
+          <span class="payment-pill">VISA</span>
+          <span class="payment-pill">MASTERCARD</span>
+          <span class="payment-pill">AMEX</span>
+          <span class="payment-pill">APPLE PAY</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
